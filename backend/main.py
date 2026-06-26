@@ -229,7 +229,7 @@ async def upload_resumes(
 
     results = []
 
-    for file in files:
+    for file in uploads:
         try:
             file_bytes = await file.read()
             filename = file.filename.lower()
