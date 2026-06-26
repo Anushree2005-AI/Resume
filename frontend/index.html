@@ -687,7 +687,9 @@ input:focus{
 <div class="toast" id="toast"></div>
 
 <script>
-const API = "https://movie-rake-impaired.ngrok-free.dev";
+const API = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+  ? 'http://127.0.0.1:8001'
+  : 'https://movie-rake-impaired.ngrok-free.dev';
 
 // ── PAGE NAV ────────────────────────────────────────────────────────────────
 function showPage(name, btn) {
