@@ -1,0 +1,10 @@
+app = "talentpool-backend"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+
+[experimental]
+  auto_rollback = true
