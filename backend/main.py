@@ -56,6 +56,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.middleware("http")
+async def add_ngrok_header(request, call_next):
+    response = await call_next(request)
+    return response
 
 @app.get("/favicon.ico")
 def favicon() -> Response:
